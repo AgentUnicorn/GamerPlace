@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Gamer Place | Website for Gamer</title>
+
+    <link rel="shortcut icon" href="../image/logo.png" type="image/x-icon">
+
+    <!-- Boostrap  -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <!-- CSS  -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body id="detail-page">
+    
+    <!-- NAVBAR AND BANNER  -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="../image/logo.png" width="125px" alt="">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./products.html">Product</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="./login.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="./cart.html" class="notification">
+                <img class="cart" src="../image/cart.png" alt="" width="30px" height="30px">
+                <span class="badge badge-pill badge-danger" style="visibility: visible;" id="soluong">0</span>
+            </a>
+            <img src="../image/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+    <!-- NAVBAR  -->
+
+    <!-- PRODUCT DETAIL  -->
+    <div class="smaller-container single-product">
+        <div class="row" id="product-detail-container">
+            <!-- <div class="col-lg-6 left-detail">
+                <img src="../image/Logitech/G633S.png" alt="">
+            </div>
+            <div class="col-lg-6 right-detail">
+                <p>Logitech</p>
+                <h1>G633S</h1>
+                <h4>$49.00</h4>
+                <input type="number" value="1">
+                <a href="" class="btn">Add To Cart</a>
+                <h3>Product Details</h3><br>
+                <p>Some text Some text Some text Some text Some text Some text Some text 
+                    Some text Some text Some text Some text Some text Some text Some text 
+                </p>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- TITLE  -->
+    <div class="smaller-container">
+        <div class="row products-container">
+            <h2>Related Products</h2>
+            <p>View More</p>
+        </div>
+    </div>
+
+    <!-- RELATED PRODUCT  -->
+    <div class="smaller-container">
+
+        <div class="row">
+            <div class="col-lg-3 featured-item">
+                <img src="../image/product-1.jpeg" alt="">
+                <h4>Logitech G903</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>$29.99</p>
+            </div>
+            <div class="col-lg-3 featured-item">
+                <img src="../image/product-2.jpeg" alt="">
+                <h4>Razer Mamba</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>$39.99</p>
+            </div>
+            <div class="col-lg-3 featured-item">
+                <img src="../image/product-3.jpeg" alt="">
+                <h4>Plextone G30</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>$49.99</p>
+            </div>
+            <div class="col-lg-3 featured-item">
+                <img src="../image/product-4.jpeg" alt="">
+                <h4>PS5 Controller</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>$9.99</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER  -->
+    <div class="container-fluid footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 footer-item footer-item-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and iOS mobile phone</p>
+                    <div class="app-logo">
+                        <img src="../image/app-store.png" alt="">
+                        <img src="../image/play-store.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 footer-item footer-item-2 center-horizontal">
+                    <img src="../image/logo.png" class="logo-footer" alt="">
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Gaming Industry to the Many.</p>
+                </div>
+                <div class="col-lg-3 footer-item footer-item-3">
+                    <h3>Useful Links</h3>
+                    <p>Coupons</p>
+                    <p>Blog Post</p>
+                    <p>Return Policy</p>
+                    <p>Join Affiliate</p>
+                </div>
+                <div class="col-lg-3 footer-item footer-item-4">
+                    <h3>Follow Us</h3>
+                    <p>Facebook</p>
+                    <p>Twitter</p>
+                    <p>Instagram</p>
+                    <p>Youtube</p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&copy; 1999 - 2021 by Nguyễn Phương Bình</p>
+
+        </div>
+    </div>
+
+    <script>
+        let MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if(MenuItems.style.maxHeight == "0px"){
+                MenuItems.style.maxHeight = "200px"
+            } else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+
+        let LoginForm = document.getElementById("LoginForm");
+        let RegForm = document.getElementById("RegForm");
+        let Indicator = document.getElementById("Indicator");
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+        function login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../main.js"></script>
+</body>
+</html>

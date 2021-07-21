@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Gamer Place | Website for Gamer</title>
+
+    <link rel="shortcut icon" href="../image/logo.png" type="image/x-icon">
+
+    <!-- Boostrap  -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <!-- CSS  -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body id="cart-page">
+    
+    <!-- NAVBAR AND BANNER  -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="../image/logo.png" width="125px" alt="">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./products.html">Product</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="./login.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="./cart.html" class="notification">
+                <img class="cart" src="../image/cart.png" alt="" width="30px" height="30px">
+                <span class="badge badge-pill badge-danger" id="soluong">0</span>
+            </a>
+            <img src="../image/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+    <!-- NAVBAR  -->
+
+    <!-- CART ITEMS DETAILS  -->
+    <div class="container cart-page">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="cart-container">
+            </tbody>
+        </table>
+
+        <div class="total-price" id="total-price">
+            <!-- <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>$200.00</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td>$53.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>$200.00</td>
+                </tr>
+            </table> -->
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <button type="button" id="checkout-btn" class="btn-square" data-toggle="modal" data-target="#checkoutModal">
+                <i class="fas fa-credit-card"></i> Check out
+            </button>
+        </div>
+    </div>
+
+
+
+    <!-- Check Out Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <!-- Form container  -->
+                    <form action="">
+                        <div class="row">
+                            <!-- Left Column  -->
+                            <div class="col-lg-6">
+                                <div class="checkout-form">
+                                    <h4>Billing Address</h4>
+                                    <div class="form-group">
+                                        <label for="fullname">Full Name</label>
+                                        <div style="display: flex;">
+                                            <input type="text" class="form-control" placeholder="Nguyễn Văn A" name=fullname id="fullname">
+                                            <span style="width: 30px; margin: auto; padding-left: 10px;" id='valid-fullname'></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email address</label>
+                                        <div style="display: flex;">
+                                            <input type="text" class="form-control" placeholder="Example@email.com" name=email id="email">
+                                            <span style="width: 30px; margin: auto; padding-left: 10px;" id='valid-email'></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address">Address</label>
+                                        <div style="display: flex;">
+                                            <input type="text" class="form-control" placeholder="12 Lê Lợi" name=address id="address">
+                                            <span style="width: 30px; margin: auto; padding-left: 10px;" id='valid-address'></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city">City:</label>
+                                        <div style="display: flex;">
+                                            <input type="text" class="form-control" placeholder="Hồ Chí Minh" name=city id="city">
+                                            <span style="width: 30px; margin: auto; padding-left: 10px;" id='valid-city'></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="state">State</label>
+                                            <div style="display: flex;">
+                                                <input type="text" class="form-control" placeholder="Thủ Đức" name=state id="state">
+                                                <span style="width: 30px; margin: auto; padding-left: 10px;" id='valid-state'></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="zip">ZIP code</label>
+                                            <div style="display: flex;">
+                                                <input type="text" class="form-control" placeholder="710000" name=zip id="zip">
+                                                <span style="width: 30px; margin: auto; padding-left: 10px;" id='valid-zip'></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column  -->
+                            <div class="col-lg-6">
+                                <div class="checkout-form">
+                                    <h4>Billing Address</h4>
+                                    <div class="form-group">
+                                        <label for="fullname">Accepted</label>
+                                        <div class="icon-container"> 
+                                            <i class="fab fa-cc-visa" style="color: navy"></i>
+                                            <i class="fab fa-cc-amex" style="color: blue"></i>
+                                            <i class="fab fa-cc-mastercard" style="color: red"></i>
+                                            <i class="fab fa-cc-discover" style="color: orange"></i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cname">Name on card</label>
+                                        <input type="text" class="form-control" placeholder="Nguyễn Văn A" id="cname">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cnumber">Card number</label>
+                                        <input type="text" class="form-control" placeholder="1111-2222-3333-4444" id="cnumber">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="expmonth">Expire Month</label>
+                                        <input type="text" class="form-control" placeholder="August" id="expmonth">
+                                    </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <label for="expyear">Expire Year</label>
+                                            <input type="text" class="form-control" placeholder="2021" id="expyear">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" class="form-control" placeholder="318" id="cvv">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <hr>
+    
+                            <div class="d-flex flex-row-reverse justify-content-between">
+                                <button id="checkOut" class="btn-checkout orange">Place Order</button>
+                                <p class="returnToCart" data-dismiss="modal">
+                                    <i class="fas fa-angle-left"></i>
+                                    <span>Return to cart</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </form>
+                    
+                </div>
+        
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER  -->
+    <div class="container-fluid footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 footer-item footer-item-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and iOS mobile phone</p>
+                    <div class="app-logo">
+                        <img src="../image/app-store.png" alt="">
+                        <img src="../image/play-store.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 footer-item footer-item-2 center-horizontal">
+                    <img src="../image/logo.png" class="logo-footer" alt="">
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Gaming Industry to the Many.</p>
+                </div>
+                <div class="col-lg-3 footer-item footer-item-3">
+                    <h3>Useful Links</h3>
+                    <p>Coupons</p>
+                    <p>Blog Post</p>
+                    <p>Return Policy</p>
+                    <p>Join Affiliate</p>
+                </div>
+                <div class="col-lg-3 footer-item footer-item-4">
+                    <h3>Follow Us</h3>
+                    <p>Facebook</p>
+                    <p>Twitter</p>
+                    <p>Instagram</p>
+                    <p>Youtube</p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&copy; 1999 - 2021 by Nguyễn Phương Bình</p>
+
+        </div>
+    </div>
+
+    
+    <script>
+        let MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if(MenuItems.style.maxHeight == "0px"){
+                MenuItems.style.maxHeight = "200px"
+            } else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+
+        let LoginForm = document.getElementById("LoginForm");
+        let RegForm = document.getElementById("RegForm");
+        let Indicator = document.getElementById("Indicator");
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+        function login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../main.js"></script>
+</body>
+</html>
