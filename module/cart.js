@@ -78,8 +78,13 @@ export function setItems(product, numberOfProduct) {
 
     //Lưu trữ xuống local 
     localStorage.setItem("productsInCart", JSON.stringify(cartItems));
-    //Thông báo là thêm thành công
-    alertAddToCartSuccess();
+    if (
+        window.location.pathname == "/html/products.html" || 
+        window.location.pathname == "/html/product-detail.html"
+    ) {
+        //Thông báo là thêm thành công
+        alertAddToCartSuccess();    
+    }
 }
 
 //Function tính total 

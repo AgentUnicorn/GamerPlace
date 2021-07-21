@@ -121,7 +121,7 @@ let products = [
         type: "Headset",
         brand: "Corsair",
         name: "HS70 Pro Wireless", 
-        img: `src="https://i.ibb.co/5cLBRsb/Corsair-HS70-WL.png" alt="Corsair-HS70-WL" border="0`,
+        img: `src="https://i.ibb.co/5cLBRsb/Corsair-HS70-WL.png" alt="Corsair-HS70-WL" border="0"`,
         price: 220,
         inCart: 0
     },
